@@ -11,7 +11,16 @@ int main() {
 	cin >> authName;
 	cout << endl;
 
-	if (authName == "Sammar") {
+	string AccessArray[] = { "Sammar", "Rabia", "Hussain" };
+	int k = 0;
+	for (int i = 0; i < sizeof(AccessArray) / sizeof(string); ++i) {
+		if (authName == AccessArray[i])
+			k = 1;
+	}
+	if (k == 1) {
+
+		cout << "\nWelcome " << authName << " to our system\n\n";
+
 		cout << "Select Options from below" << endl;
 		cout << "1- Add Employee\n";
 		cout << "2- List of Employees\n";
